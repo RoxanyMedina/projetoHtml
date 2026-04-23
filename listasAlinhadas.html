@@ -42,12 +42,14 @@
                 </ul>
         </li>
     </ul>
-    <link rel="stylesheet" href="http://fles.cod3r.com.br/curso-web/tree.css">
+    <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
     <script>
-        document.querySelectAll('[wm-folder]').forEach(folder =>{
-            const ul = folder.nextElmentSibling
-            const d = ul.style.display
-            ul.style.display = d === 'none' ? 'block' : 'none';
+        document.querySelectorAll('[wm-folder]').forEach(folder =>{
+            folder.onclick = function(e){  // <---adicionei a funcionalidade que a função ira funcionar pelo click
+                const ul = folder.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === 'none' ? 'block' : 'none';
+            } // <---adicionei essa chave fechando da folder.onclick
         })
         
         
